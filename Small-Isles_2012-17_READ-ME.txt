@@ -1,0 +1,305 @@
+READ ME
+
+##GENERAL INFORMATION##
+
+This metadata entry describes the full datasets and R code for the MSS report: 'Priority marine feature surveys within the Small Isles MPA and surrounding waters'.
+A description is also provided for the report structure.
+
+The files for the study on changes in Priority Marine Features (PMF) in and around the Small Isles MPA include:
+- The dataset: Five CSV files, available https://doi.org/10.7489/1614-1
+- The R-code: Three R files, available on Marine Scotland Science GitHub ****
+
+The files for the fishing effects study on the Tall seapen Funiculina quadrangularis within the Sea of Hebrides, Inner Sound and Minch include:
+- The dataset: One CSV file, available https://doi.org/10.7489/1614-1
+- The R-code: One R file, available on Marine Scotland Science GitHub ****
+
+
+##Details for the report 'Priority marine feature surveys within the Small Isles MPA and surrounding waters'##
+
+Available:  https://doi.org/10.7489/1614-1; main report: https://www.gov.scot/isbn/9781805252627; annexes: http://www.gov.scot/ISBN/9781805252627/documents/
+Authors: C. Greathead, R. E. Boschen-Rose, R. Langton, J. Clarke, P. J. Wright and P. Boulcott
+Report series: Scottish Marine and Freshwater Science
+ISSN: 2043-7722
+Volume: 13
+Report number: 2
+ISBN: 978-1-80525-262-7
+Publication date: 8 December 2022
+Number of pages: 51 (main report); 48 (annexes)
+
+Sections (main report): Abstract; Executive summary; Abbreviations; Introduction; Methods Summary; Results; Discussion; Summary; Acknowledgements; Data Availability; References
+Sections (annexes): Abstract; Executive summary; Annexes A - D.
+
+Abstract: Provides a brief lay summary of the report findings and future considerations.
+Executive summary: Provides a more detailed non-technical summary of the report findings and future considerations.
+Abbreviations: Lists all abbreviations used in the main text of the report.
+Introduction: Provides the background and rationale for the report, including the biodiversity, marine protection, pressures, and biodiversity and pressures reporting for the Small Isles Marine Protected Area (sections 1.1 - 1.4)
+Methods Summary: Provides a summary of the main methods used for the baseline benthic monitoring, assessing the impact of fishing on Funiculina quadrangularis (sections 2.1 - 2.2). Full methods are provided in Annex C.
+Results: Describes the main results of the baseline benthic monitoring, including an overview of the case study for Funiculina quadrangularis and Swiftia pallida; and the impact of fishing on Funiculina quadrangularis (sections 3.1 - 3.2). 
+The full results tables for the baseline benthic monitoring are provided in Annex A. The full case study is provided in Annex D.
+Discussion: Considers the results in the context of the wider scientific literature, including trends for priority marine features, the impact of fishing and future survey of priority marine features (section 4.1 - 4.3).
+Summary: Provides a brief high-level non-technical summary of the report findings (section 5). 
+References: Lists all literature and other sources cited in the main text of the report alphabetically by first author (section 6).
+Acknowledgements: Details the source of funding for the work and thanks those who contributed to the work but were not authors of the report.
+Data availability: Details how the Small Isles MPA data set can be accessed.
+Annex A: Data tables providing summaries of the overall survey results (A.1. & A.2), density results for the eight species of interest (A.3 - A.10) and density results for the fishing effects study (A.11).
+Annex B: Tables providing the research survey details (B.1 & B.2).
+Annex C: Provides the full methods detail for the report, including a separate reference list for the methods.
+Annex D: Provides the full details of the case study for density variation in Funiculina quadrangularis and Swiftia pallida.
+
+
+##PMF STUDY FILES - includes case study data##
+
+##File 1 'Small-Isles_2012-17_all-DSI-data.csv'##
+Note - This file includes all of the observations for digital still images, including biological, sediment, habitat and community data, and station metadata.
+
+Column 1: Year [2012, 2013, 2014, 2015, 2016, 2017]
+Column 2: Cruise_ID - cruise number with number letter code
+Column 3: Image_ID - the unique identifier for digital still images within each cruise
+Column 4: DecLat - latitude information in decimal degrees
+Column 5: DecLong - longitude information in deicmal degrees
+Column 6: Box_ID - unique survey box identifier, conserved across years
+Column 7: Sediment - sediment code for the image, see abbreviations
+Column 8: Habitat - habitat code for the image, see abbreviations
+Column 9: Community - community code for the image, see abbreviations
+Column 10: Area_Observed_% - percentage of the image that is visible, i.e. not obscured. '0' means zero percentage obscured, i.e. the whole image is visible.
+Column 11: Burrows - number of burrows counted from each image
+Column 12: Faunal_Turf_% - percentage of the image covered by faunal turf  
+Columns 13 - 80: Abundance of each taxon observed within an individual image. Zero ('0') means the taxon was not observed in that image.
+Abundance is the count of individuals for each taxon within an image (n), except where percentage (%) is indicated or 'occurrence' (= count of discrete patches) for Parazoanthus anguicomus.
+Column headers are Latin species names of taxa where possible. In some cases genus names, higher level taxonomic assignments or common names are used.
+For abbreviations see abbreviation lists.
+
+
+##File 2 'Small-Isles_2012-17_PMF-DSI-densities.csv'##
+Note - This file only includes observations for PMF species or habitat components from digital still images.
+Only images with <25% of the image obscured are included.
+
+Column 1: Year [2012, 2013, 2014, 2015, 2016, 2017]
+Column 2: Cruise_ID - cruise number with number letter code
+Column 3: Image_ID - the unique identifier for digital still images within each cruise
+Column 4: DecLat - latitude information in decimal degrees
+Column 5: DecLong - longitude information in deicmal degrees
+Column 6: Box_ID - unique survey box identifier, conserved across years
+Column 7: Sediment - sediment code for the image, see abbreviations
+Column 8: Habitat - habitat code for the image, see abbreviations
+Column 9: Community - community code for the image, see abbreviations
+Column 10: DSI_Area_m2 - size of the patch of seafloor captured in the digital still image, in meters squared
+Column 11: Area_Obscured_% - percentage of the image that is obscured. '0' means zero percentage obscured, i.e. the whole image is visible.
+Column 12: Area_Obscured_m2 - size of the area within the image that is obscured, in meters squared. '0' means zero area obscured, i.e. the whole image is visible.
+Column 13: Viewed_Area_m2 - size of the area within the image that is visible (= column 10 - column 12) in meters squared
+Columns 14 - 35: Abundance of each taxon observed within an individual image. Zero ('0') means the taxon was not observed in that image. 
+Abundance is generally the count of individuals for each taxon within an image (n) or density of individuals within an image per meter squared (n.m2).
+For Parazoanthus anguicomus, 'occurrence' (o = count of discrete patches) or 'occurrence' density per meter squared (o.m2) is also provided. 
+For Swiftia pallida communities with sponges or Caryophyllia smithii (SC) and burrowed mud with seapens (BS) presence/absence (P/A) is used to capture abundance information where 1 = Present and 0 = Absent.
+Column headers are generally abbreviations of taxonomic names, see abbreviations lists.
+
+
+##File 3 'Small-Isles_2012-17_HDV-PMF-data.csv'##
+Note - This file includes all of the observations for high definition video, including biological data and station metadata.
+
+Column 1: Year [2015, 2016, 2017]
+Column 2: Cruise_ID - cruise number with number letter code
+Column 3: Box_ID - unique survey box identifier, conserved across years
+Column 4: Tow_ID - unique tow number, e.g. 'S04_01' where 'S04' corresponds to the survey box identifier
+Column 5: Date - day of video tow in format dd.mm.yy
+Column 6: Time_Start - time of tow start in UTC, format hh:mm:ss
+Column 7: Depth_m - average depth of tow in meters
+Column 8: Gear - type of equipment used to collect video [Drop or Lander* - almost all observations from Drop frame]
+Column 9: First_PMF - Primary (most common) PMF encountered during the tow, see abbreviations lists
+Column 10: Second_PMF - Secondary (second most common) PMF encountered during the tow, see abbreviations lists
+Column 11: Duration_1min_seg - duration of the video tow in number of 1 minute segments
+Column 12: Average_speed_Kn - speed at which the video equipment was towed (knots)
+Column 13: Viewed_Area_m2 - size of the area within the tow in meters squared (m2)
+Columns 14 - 67: Abundance of each taxon observed within an individual video tow.
+Abundance is recorded as the count of individuals for each taxon within an image (n) or density of individuals within an image per meter squared (n.m2).
+Abundance is also recorded as the number of one minute video segments within a tow containing a species or feature (N) and the percentage of one minute video segments within a tow containing these species or features (%N). 
+Column headers are generally abbreviations taxonomic names, see abbreviations lists.
+
+
+##File 4 'Small-Isles_2012-17_PMF-density-calculations.R'##
+Note - This file calculates the box-level densities for the PMF species or habitat components featured in the report.
+Input files are File# 2 & 3 above.
+
+
+##File 5 'Small-Isles_2012-17_Boxes_WKT.csv'##
+Note - This file provides the spatial information for the survey box locations used in the report. File is best read in 'R'.
+
+Column 1: WKT - poisitions of the multipolygon used to define the survey box
+Column 2: Box_ID - unique survey box identifier
+Column 3: Target_Feature - PMF species or habitat component targetted by the survey box, see abbreviations lists
+Column 4: Sediment - sediment code for the survey box, see abbreviations
+
+
+##File 6 'Small-Isles_2012-2017_Tows_WKT.csv'##
+Note - This file provides the spatial information for the High Definition Video tow paths used in the report. File is best read in 'R'.
+
+Column 1: Tow_ID - unique tow number, e.g. 'S04_01' where 'S04' corresponds to the survey box identifier
+Column 2: Year [2015, 2016, 2017] 
+Column 3: Cruise_ID - cruise number with number letter code
+Column 4: Box_ID - unique survey box identifier
+Column 5: WKT - poisitions of the linestring used to define the tow path
+
+
+##File 7 'Small-Isles_FQ_casestudy.R'##
+Note - This file calculates the box-level densities for Funiculina quadrangularis and interaction with fishing activity as part of the case study featured in the report.
+Input files are Files# 2 & 5 above.
+
+##File 8 'Small-Isles_SP_casestudy.R'##
+Note - This file calculates the box-level densities for Swiftia pallida as part of the case study featured in the report.
+Input files are Files# 2, 3, 5 & 6 above.
+
+
+General abbreviations list
+SP: Swiftia pallida
+SC: Swiftia pallida communities with sponges or Caryophyllia smithii
+FQ: Funiculina quadrangularis
+BF: Burrowed mud with Funiculina quadrangularis
+BS: Burrowed mud with seapens
+BP: Burrowed mud with Pachycerianthus multiplicatus
+BM: Burrowed mud
+AS: Arachnanthus sarsi
+PM: Pachycerianthus multiplicatus
+PA: Parazoanthus anguicomus
+LC: Leptometra celtica
+LS: Leptometra celtica aggregations on soft sediment
+LH: Leptometra celtica aggregations on hard sediment
+MM: Modiolus modiolus
+MM Shells: Modiolus modiolus shells
+AF: Atrina fragilis
+AF Dead: Dead Atrina fragilis shells
+CS Agg: Aggregation of Caryophyllia smithii, i.e. more than 10 C. smithii in on digital still image
+UEnF: Unidentified encrusting fauna, e.g. encrusting sponges and ascidians within each image
+UGbSp: Unidentifiable large goblet-shaped sponges, e.g. Phakellia ventilabrum and Axinella infundibuliformis, within each image
+ULSp: Unidentifable large erect branching or globular sponges e.g. Stelligera stuposa, Raspailia hispida, within each image
+ULAs: Unidentifable ascidians
+ULSpAs: Combined unidentifable large erect branching or globular sponges (ULSp) and unidentifable ascidians (ULAs)
+UI: Unknown ID, e.g. 'UI Fish' = Unknown ID of fish
+sp: species, e.g. 'Pagurus sp' = species of hermit crab in the Pagurus genus
+n: count of individuals for each taxon within an image or video segment
+n.m2: density of individuals within an image or video segment per meter squared
+N: number of one minute video segments within a tow containing a species or feature 
+N%: percentage of one minute video segments within a tow containing a species or feature
+m: meters
+m2: meters squared
+kt: knots
+o: occurrence, i.e. count of discrete patches of a taxon within an image. Only used for the clustered sea anemone Parazoanthus anguicomus, where counting individuals is challenging.
+o.m2: occurrence density per meter squared. Only used for the clustered sea anemone Parazoanthus anguicomus.
+%: percentage, e.g. percentage of an image obscured, or percentage of an image covered by a taxon.
+P/A: presence or absence of a species or feature within an image. Recorded as '1' for present and '0' as absent.
+
+Sediment code abbreviations list (note - individual abbreviations can be combined to create a complex sediment code)
+M: Mud (< 0.68 mm)
+sM: sandy Mud (< 1mm)
+mS: muddy Sand (< 1mm)
+CS: Coarse sand - Sand (< 2mm)
+G: Gravel (< 8mm)
+P: Pebbles (< 32 mm)
+C: Cobbles (< 256 mm)
+B: Boulders (> 256 mm)
+PCB: Pebbles, Cobbles and Boulders
+PC: Pebbles and Cobbles
+Sh: Shells
+R: Bedrock
+
+Habitat code abbreviations list (note - individual abbreviations can be combined to create a complex habitatcode)
+SS: Soft Sediment (mud, sandy mud, muddy sand, some coarse sand)
+MS: Mixed Sediment (some coarse sand, gravel, pebbles, shells)
+C: Cobbles
+B: Pebbles
+PCB: Pebbles, Cobbles and Boulders
+PC: Pebbles and Cobbles
+CB: Cobbles and Boulders
+R: Bedrock
+
+Community code abbreviations list (note - these approximate biotopes but do not align with current PMF biotope listings)
+BM: Burrowed mud with occasional Cerianthus sp (Primary PMF = BM)
+BMA: Burrowed mud with occasional Cerianthus sp and other burrowing anemone (including Arachnanthus sarsi) (primary PMF = BM; secondary PMF = AS)
+BMSA: Burrowed mud with occasional Cerianthus sp and other burrowing anemone and seapens (primary PMF = BMS; secondary PMF = BM)
+BMC: Burrowed mud with Cariophyllia sp (primary PMF = BM)
+BMS: Burrowed mud with occasional Cerianthus sp and seapens (other than Funiculina quadrangularis) (primary PMF = BMS; secondary PMF = BM)
+BMF: Burrowed mud with occasional Cerianthis sp and Funiculina quadrangularis (primary PMF = BMF; secondary PMF = BM)
+BMP: Burrowed mud with occasional Cerianthus sp and Pachycerianthus multiplicatus (primary PMF = BMP; secondary PMF = BMP)
+BMFP: Burrowed mud with occasional Cerianthus sp and Funiculina quadrangularis and Pachycerianthus multiplicatus (primary PMF = BMF; secondary PMF = BMP)
+SLB: Soft sediment with burrowing brittlestars (O. albida?) and seapens
+SLC: Soft seidment with Leptometra celtica (primary PMF = LS)
+SLQ: Soft sediment with Quill worms (family: Onuphidae)
+SLS: Soft sediment with Leptometra celtica and Swiftia pallida (primary PMF = LS; secondary PMF = SP)
+MS: Mixed sediment with some burrows and few cobbles/shells
+MSS: Mixed sediment with some burrows and few cobbles/shells and seapens
+MSA: Mixed sediment with some burrows and few cobbles/shells, occasional Faunal Turf and other burrowing anemone and/or Ascidians and/or sponges
+MSAS: Mixed sediment with some burrows and few cobbles/shells, occasional Faunal Turf and Arachnanthus sarsi and Ascidians and/or sponges (primary PMF = AS)
+MSF: Mixed sediment with some burrows and few cobbles/shells, occasional Faunal Turf and Atrina fragilis and seapens and burrowing anemones (primary PMF = AF; secondary PMF = AS)
+MSBS: Mixed sediment with some burrows and few cobbles/shells, occasional Faunal Turf and brittle stars
+MSC: Mixed sediment with some burrows and few cobbles/shells and Caryophyllia sp
+MSCV: Mixed sediment with some burrows and few cobbles/shells and Caryophyllia sp, and Corynactis viridis and sponges
+MSCB: Mixed sediment with some burrows and few cobbles/shells and Caryophyllia sp and brittle stars
+MSCS: Mixed sediment with some cobbles/shells and Caryophyllia sp and occasional Swiftia pallida and sponges
+MCP: Mixed sediment and cobbles with Faunal Turf, Caryophyllia sp and Parazoanthus colonies (primary PMF = PA)
+MSP: Mixed sediment and cobbles with Faunal Turf and Parazoanthus colonies (primary PMF = PA)
+MCS: Mixed sediment and cobbles with Faunal Turf and Caryophyllia sp and sponges
+MX: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf 
+MXB: Mixed sediment with burrows, few cobbles, occasional boulders with Faunal Turf
+MXBS: Mixed sediment with burrows, few cobbles, occasional boulders with Faunal Turf and brittle stars and sponges
+MXS: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf and sponges and Caryophyllia sp
+MXSS: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf and sponges and Swiftia pallida (primary PMF = SC; secondary PMF = SP)
+MXL: Mixed mud and cobbles, occasional boulders with Faunal Turf, Leptometra celtica and sponges (primary PMF = LS; secondary PMF = LH)
+MXV: Mixed sediment and cobbles, occasional boulders with Faunal Turf and sponges and brittle stars and Corynactis viridis
+MXLP: Mixed mud and cobbles, occasional boulders with Faunal Turf, Leptometra celtica and Parazoanthus anguicomus and sponges (primary PMF = LH)
+MLC: Mixed sediment and cobbles, occasional boulders with Faunal Turf, Leptometra celtica and Caryophyllia sp and sponges (primary PMF = LH)
+MLS: Mixed sediment and cobbles, occasional boulders with Faunal Turf, Leptometra celtica, Caryophyllia sp and Swiftia pallida and sponges (primary PMF = LH, secondary PMF = SP)
+MPS: Mixed sediment and cobbles, occasional boulders with Faunal Turf and Parazonathus colonies and Swiftia pallida and Caryophyllia sp (primary PMF = PA, secondary PMF = SP)
+MXMS: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf with Arachnanthus sarsi and Modiolus modiolus (primary PMF = MM; secondary PMF = AS)
+MXA: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf and Atrina fragilis (primary PMF = AF)
+MXM: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf and Modiolus modiolus (primary PMF = MM)
+MXMA: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf with Modiolus modiolus and Atrina fragilis (primary PMF = MM; secondary PMF = AF)
+MXMP: Mixed sediment and cobbles, occasional boulders with few burrows and Faunal Turf and Modiolus modiolus with Pachycerianthus multiplicatus (primary PMF = MM; secondary PMF = BMP)
+RS: Rock and boulders with Faunal Turf and sponges
+RSL: Rock and boulders with Faunal Turf and sponges and Leptometra celtica (primary PMF = LH)
+RSX: Rock and boulders with Faunal Turf and sponges and algal turf
+RSS: Rock and boulders with Faunal Turf and sponges and Swiftia pallida and Caryophyllia sp (primary PMF = SC; secondary PMF = SP)
+RSB: Rock and boulders with Faunal Turf and sponges and brittle stars and Metridium senile(?)
+RSA: Rock and boulders with Faunal Turf and sponges and Alcyonium digitatum
+RSC: Rock and boulders with Faunal Turf and sponges and Caryophyllia sp
+RSCB: Rock and boulders with Faunal Turf and sponges and Caryophyllia sp and brittlestars
+RSP: Rock and boulders with Faunal Turf and sponges and Caryophyllia sp and Parazoanthus colonies and Swiftia pallida (primary PMF = PA; secondary PMF = SP)
+RSV: Rock and boulders with Faunal Turf and sponges and Corynactis viridis and Caryophyllia sp
+X: Not analysed due to focus or silt 
+ 
+
+##Fishing Effects STUDY FILES##
+
+##File 1 'FQ_2017_dtaStation.csv'##
+Note - This file includes all of the observations for digital still images in the Funiculina quadrangularis fishing effects study, including Funiculina counts, environmental data, VMS data and station metadata.
+
+Column 1: Image_ID - the unique identifier for digital still images within the dataset
+Column 2: LAT - latitude information in decimal degrees
+Column 3: LON - longitude information in decimal degrees
+Column 4: Transect_ID - transect number along which digital still images were captured
+Column 5: Date - day of digital still image transect in format dd.mm.yy
+Column 6: Funiculina.quadrangularis - count of Funiculina quadrangularis in the digital still image
+Column 7: Station - unique station identifier for the location of the (typically) five digital still images taken at each station
+Column 8: curvature - value of seabed curvature characteristic derived using GIS tools
+Column 9: depth - value of seabed depth (m) derived from bathymetric data
+Column 10: gravel - value of percentage gravel (%) at digital still image location drived from grab data using GIS tools
+Column 11: minsal - minimum salinity value (unitless) calculated from 1988 - 2004 POLCOMS model data
+Column 12: mud - value of percentage mud (%) at digital still image location drived from grab data using GIS tools
+Column 13: slope - value of seabed slope characteristic derived using GIS tools
+Column 14: SubsurfSAR - C-square SAR (swept area divided by the surface area of the grid cell) for subsurface abrasion (penetration and/or disturbance of the sediment deeper than the surface of the seabed: ≥ 2 cm)
+Column 15: SurfSAR - C-square SAR (swept area divided by the surface area of the grid cell) for surface abrasion (penetration and/or disturbance of the surface of the seabed: top 2 cm of sediment)
+Column 16: cminsal - minimum salinity value (unitless) calculated from 1988 - 2004 POLCOMS model data centred relative to the median
+Column 17: cslope - value of seabed slope characteristic derived using GIS tools centred relative to the median
+Column 18: ccurvature - value of seabed curvaturecharacteristic derived using GIS tools centred relative to the median
+Column 19: cmud - value of percentage mud (%) at digital still image location drived from grab data using GIS tools centred relative to the median
+Column 20: cgravel - value of percentage gravel (%) at digital still image location drived from grab data using GIS tools centred relative to the median
+Column 21: cvms - value of VMS data centred relative to the median
+Column 22: cdepth - value of seabed depth (m) derived from bathymetric data centred realtive to the median 
+Column 23: fBox - identification number of the survey box
+Column 24: fStation.No - integer identification for the station
+Column 25: fArea - the study area; SI - Sea of the Hebrides, WR - Minch, SK - Inner Sound
+
+
+##File 2 'FQ_VMS_analysis.R'##
+Note - This file calculates the effects of fishing intensity, depth, percentage mud, percentage gravel, salinity, seafloor slope, seafloor curvature, and study area (Sea of the Hebrides, the Inner Sound and the Minch) on Funiculina quadrangularis counts.
+Approach uses a Generalised Linear Mixed Model (GLMM) framework, as detailed in the report.
+
+Input file is File# 1 above.
