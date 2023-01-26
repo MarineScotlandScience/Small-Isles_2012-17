@@ -24,7 +24,7 @@ Volume: 14
 Report number: 1
 ISBN: 978-1-80525-262-7
 Publication date: 3 Feburary 2023
-Number of pages: 51 (main report); 50 (annexes)
+Number of pages: 52 (main report); 50 (annexes)
 
 Sections (main report): Abstract; Executive summary; Abbreviations; Introduction; Methods Summary; Results; Discussion; Summary; Acknowledgements; Data Availability; References
 Sections (annexes): Abstract; Executive summary; Annexes A - D.
